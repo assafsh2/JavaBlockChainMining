@@ -63,7 +63,11 @@ public class BitCoinEngine {
   }
 
   public boolean isTransactionValid(Transaction transaction) {
-    // TODO implements
+    if(transaction.getMoney() <
+        Utils.getCurrentBalanceForAccount(transaction.getFromAccount(), blockChain)) {
+      transaction.setStatus(TransactionStatus.REJECTED);
+      return false;
+    }
     return true;
   }
 }

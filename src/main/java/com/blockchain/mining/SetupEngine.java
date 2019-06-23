@@ -51,10 +51,21 @@ public class SetupEngine implements AutoCloseable {
         2);
 
     executeInFixedRate(
+        () -> {
+          try {
+            accounts.get(AccountName.C).mineBlock(difficulty);
+          } catch (InterruptedException e) {
+            e.printStackTrace();
+          }
+        },
+        2,
+        3);
+
+    executeInFixedRate(
         () ->
             accounts.forEach(
                 (accountName, account) ->
-                    account.sendBitcoin(
+                    account.sendMoney(
                         Utils.getRandomAccountName(accountName),
                         Utils.randomInt(),
                         Utils.randomInt())),

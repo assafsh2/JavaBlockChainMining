@@ -77,6 +77,7 @@ public final class Utils {
             .flatMap(
                 block ->
                     block.getTransactions().stream()
+                        .filter(Utils::test)
                         .map(transaction -> new Pair<>(block.getWhoMinnedMe(), transaction)))
             .mapToInt((Pair<AccountName, Transaction> pair) -> getAmount(accountName, pair))
             .sum();
@@ -101,5 +102,9 @@ public final class Utils {
       return fee;
     }
     return 0;
+  }
+
+  private static boolean test(Transaction transaction) {
+    return transaction.getStatus() == TransactionStatus.CONFIRMED;
   }
 }

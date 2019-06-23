@@ -9,7 +9,7 @@ public class Account {
     this.bitCoinEngine = bitCoinEngine;
   }
 
-  public void sendBitcoin(AccountName toAccount, Integer amount, int fee) {
+  public void sendMoney(AccountName toAccount, Integer amount, int fee) {
     System.out.println(this.accountName + " sending " + amount + " to " + toAccount);
     if (bitCoinEngine.getUnconfirmedTrasactions().stream()
         .anyMatch(
@@ -19,7 +19,7 @@ public class Account {
       System.out.println("Found unconfirmed transaction, ignore");
       return;
     }
-    // Validate transaction
+
     if (amount > Utils.getCurrentBalanceForAccount(accountName, bitCoinEngine.getBlockChain())) {
       System.out.println("There is not enough balance, ignore");
       return;
