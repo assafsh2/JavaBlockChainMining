@@ -6,13 +6,11 @@ public enum AccountName {
   A,
   B,
   C,
-  D;
-  //  E;
+  D,
+  E;
 
   public String toString(List<Block> blockChain) {
-    return "AccountName :"
-        + this.name()
-        + " balance is :"
-        + Utils.getCurrentBalanceForAccount(this, blockChain);
+    return String.format("AccountName :%s balance is :%d", this.name(),
+        Utils.getCurrentBalanceForAccount(this, blockChain));
   }
 }

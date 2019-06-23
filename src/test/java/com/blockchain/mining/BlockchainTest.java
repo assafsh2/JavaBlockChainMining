@@ -8,6 +8,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 public class BlockchainTest {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> First init
+>>>>>>> First init
     @Test
     public void testBalancePerAccount() {
         List<Transaction> transactions = new ArrayList<>();

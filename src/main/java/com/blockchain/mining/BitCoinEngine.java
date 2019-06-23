@@ -63,7 +63,10 @@ public class BitCoinEngine {
   }
 
   public boolean isTransactionValid(Transaction transaction) {
-    // TODO implements
+    if(transaction.getMoney() <
+        Utils.getCurrentBalanceForAccount(transaction.getFromAccount(), blockChain)) {
+      return false;
+    }
     return true;
   }
 }
