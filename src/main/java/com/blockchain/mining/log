@@ -1,0 +1,59 @@
+"C:\Program Files\Java\jdk1.8.0_121\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2018.2.5\lib\idea_rt.jar=50991:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2018.2.5\bin" -Dfile.encoding=UTF-8 -classpath "C:\Program Files\Java\jdk1.8.0_121\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\deploy.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext\zipfs.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\javaws.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\management-agent.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\plugin.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\rt.jar;C:\Users\AyeletAssaf\assaf\out\production\classes" com.blockchain.mining.Main
+B sending 66 to C
+A sending 74 to C
+C sending 78 to A
+Found unconfirmed transaction, ignore
+D sending 73 to A
+B sending 85 to A
+Found unconfirmed transaction, ignore
+A sending 85 to C
+Found unconfirmed transaction, ignore
+C sending 30 to B
+Found unconfirmed transaction, ignore
+D sending 43 to A
+Found unconfirmed transaction, ignore
+ readyToMineNewBlock  unconfirmedTrasactions size: 3
+ readyToMineNewBlock blockChain size: 0
+-- Created block '1' to be mined
+A-- Started minning block '1' with difficulty +3
+B-- Started minning block '1' with difficulty +3
+Account B succeed to mine block 1
+Account A failed to mine block 1 A failed to mine 1
+|--------------------------------------------|
+| B-- finished minning block '1'     |
+| B-- adding Block '1' to BlockChain |
+|--------------------------------------------|
+B sending 71 to C
+A sending 35 to C
+C sending 53 to B
+Found unconfirmed transaction, ignore
+D sending 62 to A
+There is not enough balance, ignore
+B-- Waiting for Block to be created..
+A-- Waiting for Block to be created..
+B sending 53 to D
+Found unconfirmed transaction, ignore
+A sending 55 to D
+Found unconfirmed transaction, ignore
+C sending 92 to A
+Found unconfirmed transaction, ignore
+D sending 41 to A
+There is not enough balance, ignore
+B-- Waiting for Block to be created..
+A-- Waiting for Block to be created..
+ readyToMineNewBlock  unconfirmedTrasactions size: 2
+ readyToMineNewBlock blockChain size: 1
+-- Created block '2' to be mined
+CHAIN VALIDATION chain size 1 is valid
+CHAIN VALIDATION chain size 1 is valid
+The current blockchain is:Block id=1
+Transaction{fromAccount=B,toAccount=C,money=66,fee=93}
+Transaction{fromAccount=A,toAccount=C,money=74,fee=17}
+Transaction{fromAccount=D,toAccount=A,money=73,fee=50}The current balance for each account is:
+AccountName :A balance is :99
+AccountName :B balance is :194
+AccountName :C balance is :240
+AccountName :D balance is :27
+
+
+Process finished with exit code 0
