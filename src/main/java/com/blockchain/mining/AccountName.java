@@ -10,7 +10,8 @@ public enum AccountName {
   E;
 
   public String toString(List<Block> blockChain) {
-    return String.format("AccountName :%s balance is :%d", this.name(),
-        Utils.getCurrentBalanceForAccount(this, blockChain));
+    return String.format(
+        "AccountName :%s balance is :%d",
+        this.name(), Utils.getCurrentBalanceForAccount(this, blockChain));
   }
 }

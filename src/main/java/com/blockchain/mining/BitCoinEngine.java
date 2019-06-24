@@ -63,8 +63,8 @@ public class BitCoinEngine {
   }
 
   public boolean isTransactionValid(Transaction transaction) {
-    if(transaction.getMoney() <
-        Utils.getCurrentBalanceForAccount(transaction.getFromAccount(), blockChain)) {
+    if (transaction.getMoney()
+        < Utils.getCurrentBalanceForAccount(transaction.getFromAccount(), blockChain)) {
       transaction.setStatus(TransactionStatus.REJECTED);
       return false;
     }

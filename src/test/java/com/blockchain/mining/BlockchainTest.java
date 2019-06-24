@@ -7,11 +7,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 public class BlockchainTest {
-
     private static void accept(Transaction transaction) {
         transaction.setStatus(TransactionStatus.CONFIRMED);
     }
-
     @Test
     public void testBalancePerAccount() {
         List<Transaction> transactions = new ArrayList<>();
